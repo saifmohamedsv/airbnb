@@ -56,7 +56,7 @@ const Header = () => {
 
       <div className="flex items-center space-x-4 justify-end">
         <p className="hidden md:block cursor-pointer">Become a host</p>
-        <GlobeAltIcon className="h-6 w-6" />
+        <GlobeAltIcon className="hidden md:block h-6 w-6" />
         <div className="flex items-center space-x-2 border-2 rounded-full p-2">
           <MenuIcon className="h-6" />
           <UserCircleIcon className="h-6" />
