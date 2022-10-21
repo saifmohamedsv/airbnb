@@ -19,6 +19,15 @@ const Header = () => {
     setStartDate(ranges.Selection.startDate);
     setEndDate(ranges.Selection.endDate);
   };
+
+  const resetInput = () => {
+    setSearchInput("")
+  }
+
+  const handleSubmit = () => {
+    
+  }
+
   const selectionRange = {
     startDate,
     endDate,
@@ -82,7 +91,7 @@ const Header = () => {
           </div>
 
           <div className="flex mt-2">
-            <button className="flex-1 text-gray-500" onClick={() => setSearchInput("")}>CANCEL</button>
+            <button className="flex-1 text-gray-500" onClick={resetInput}>CANCEL</button>
             <button className="flex-1 text-red-400">SAVE</button>
           </div>
         </div>
