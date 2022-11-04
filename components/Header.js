@@ -8,12 +8,14 @@ import {
   UserIcon,
 } from "@heroicons/react/solid";
 import { DateRangePicker } from "react-date-range";
+import { useRouter } from "next/router";
 
-const Header = () => {
+const Header = ({ placeholder = "Start your search" }) => {
   const [searchInput, setSearchInput] = useState("");
   const [noOfGuests, setNoOfGuests] = useState(1);
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const router = useRouter();
 
   const handleSelect = (ranges) => {
     setStartDate(ranges.Selection.startDate);
@@ -21,12 +23,20 @@ const Header = () => {
   };
 
   const resetInput = () => {
-    setSearchInput("")
-  }
+    setSearchInput("");
+  };
 
-  const handleSubmit = () => {
-    
-  }
+  const search = () => {
+    router.push({
+      pathname: "/search",
+      query: {
+        location: searchInput,
+        guests: noOfGuests,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+      },
+    });
+  };
 
   const selectionRange = {
     startDate,
@@ -36,7 +46,10 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 p-5 md:p-10 grid grid-cols-3 bg-white shadow-md">
-      <div className="relative flex items-center h-10 cursor-pointer my-auto">
+      <div
+        className="relative flex items-center h-10 cursor-pointer my-auto"
+        onClick={() => router.push("/")}
+      >
         <Image
           src="https://links.papareact.com/qd3"
           layout="fill"
@@ -54,7 +67,7 @@ const Header = () => {
            outline-none text-sm text-gray-500
             placeholder-gray-400"
           type="text"
-          placeholder="Start you search"
+          placeholder={placeholder}
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
         />
@@ -67,7 +80,7 @@ const Header = () => {
 
       <div className="flex items-center space-x-4 justify-end">
         <p className="hidden md:block cursor-pointer">Become a host</p>
-        <GlobeAltIcon className="hidden md:block h-6 w-6" />
+        <GlobeAltIcon className="h-6 w-6" />
         <div className="flex items-center space-x-2 border-2 rounded-full p-2">
           <MenuIcon className="h-6" />
           <UserCircleIcon className="h-6" />
@@ -87,12 +100,22 @@ const Header = () => {
               Number of guests
             </h2>
             <UserIcon className="h-5" />
-            <input min={1} value={noOfGuests} onChange={(e) => setNoOfGuests(e.target.value)} type="number" className="w-12 pl-2 text-red-400 outline-none text-lg" />
+            <input
+              min={1}
+              value={noOfGuests}
+              onChange={(e) => setNoOfGuests(e.target.value)}
+              type="number"
+              className="w-12 pl-2 text-red-400 outline-none text-lg"
+            />
           </div>
 
           <div className="flex mt-2">
-            <button className="flex-1 text-gray-500" onClick={resetInput}>CANCEL</button>
-            <button className="flex-1 text-red-400">SAVE</button>
+            <button className="flex-1 text-gray-500" onClick={resetInput}>
+              CANCEL
+            </button>
+            <button className="flex-1 text-red-400" onClick={search}>
+              SEARCH
+            </button>
           </div>
         </div>
       )}
