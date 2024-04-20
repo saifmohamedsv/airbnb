@@ -1,27 +1,72 @@
-# Next.js + Tailwind CSS Example
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+# Airbnb Clone
 
-## Deploy your own
+This is an airbnb clone  ❤️
+## Features
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- Explore beatifull landing page
+- Search for properties
+- Filter using date, number of guests
+- Nice looking results page
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Tech Stack
 
-## How to use
+**Client:** Next.js, Tailwindcss
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Run Locally
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+Clone the project
 
 ```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+  git clone https://github.com/saifmohamedsv/airbnb
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Go to the project directory
+
+```bash
+  cd airbnb
+```
+
+Install dependencies
+
+```bash
+  npm Install --legacy-peer-deps
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Demo
+https://airbnb-clone-henna-beta.vercel.app/
+## Screenshots
+1
+![App Screenshot](https://i.ibb.co/QP5kJ0Z/Screenshot-2024-04-20-at-13-26-25.png)
+2
+![App Screenshot](https://i.ibb.co/VTKj37W/Screenshot-2024-04-20-at-11-45-14.png)
+3
+![App Screenshot](https://i.ibb.co/PDsGRd5/Screenshot-2024-04-20-at-11-45-14.png)
+4
+![App Screenshot](https://i.ibb.co/P551hYT/Screenshot-2024-04-20-at-11-45-14.png)
+5
+![App Screenshot](https://i.ibb.co/n7JhYDy/Screenshot-2024-04-20-at-11-45-14.png)
+6
+![App Screenshot](https://i.ibb.co/GRTFYtd/Screenshot-2024-04-20-at-11-45-14.png)
+
+## Feedback
+
+If you have any feedback, please reach out to us at saifmohamed.dev@gmail.com
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://saifmohamedsv.github.io/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saifmohamedsv)
+
+
+## Authors
+
+- [@saifmohamedsv](https://www.github.com/saifmohamedsv)
+
